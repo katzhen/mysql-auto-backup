@@ -40,5 +40,5 @@ echo ${ENDSTR} >> $LOG_FILE
 
 # 删除过期备份
 cd /${BACKUP_ROOT}
-find . -type d -mmin +1 | xargs rm -rf
+find . -type d -mtime +${DAYS} | xargs rm -rf
 
